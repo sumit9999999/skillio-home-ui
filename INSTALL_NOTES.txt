@@ -1,0 +1,24 @@
+# Skillio Home UI
+
+This is a complete Expo project.
+
+## Start the project
+
+1. Extract the ZIP.
+2. Open the extracted folder in VS Code.
+3. Open Terminal in that folder.
+4. Run:
+
+npm install
+
+Then:
+
+npx expo-doctor
+
+Then start:
+
+npx expo start --clear
+
+Scan the QR code with Expo Go.
+
+You do NOT need to run create-expo-app again.

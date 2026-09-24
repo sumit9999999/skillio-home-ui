@@ -1,0 +1,7 @@
+import React from 'react';
+import {Pressable, StyleSheet, Text, View} from 'react-native';
+import {Ionicons} from '@expo/vector-icons';
+import {colors} from '../theme/colors';
+const items=[['Home','home','home-outline'],['Classes','calendar','calendar-outline'],['Explore','compass','compass-outline'],['Profile','person','person-outline']];
+export default function BottomNav({activeIndex=0,onChange}){return <View style={styles.nav}>{items.map(([label,a,b],i)=>{const active=i===activeIndex;return <Pressable key={label} onPress={()=>onChange?.(i)} style={({pressed})=>[styles.item,pressed&&styles.pressed]}><View style={[styles.iconWrap,active&&styles.activeIconWrap]}><Ionicons name={active?a:b} size={21} color={active?colors.primary:colors.muted}/></View><Text style={[styles.label,active&&styles.active]}>{label}</Text></Pressable>})}</View>}
+const styles=StyleSheet.create({nav:{height:68,backgroundColor:'#fff',borderTopWidth:1,borderTopColor:colors.border,flexDirection:'row',justifyContent:'space-around',alignItems:'center',paddingHorizontal:8},item:{minWidth:70,height:62,alignItems:'center',justifyContent:'center',borderRadius:16},pressed:{opacity:.65,transform:[{scale:.97}]},iconWrap:{width:38,height:30,alignItems:'center',justifyContent:'center',borderRadius:15},activeIconWrap:{backgroundColor:'#E7F8FA'},label:{fontSize:10,color:colors.muted,fontWeight:'600',marginTop:2},active:{color:colors.primary,fontWeight:'900'}});

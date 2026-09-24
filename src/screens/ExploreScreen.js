@@ -1,0 +1,7 @@
+import React from 'react';
+import {Pressable,StyleSheet,Text,View} from 'react-native';
+import {Ionicons} from '@expo/vector-icons';
+import {colors} from '../theme/colors';
+const items=[['Speaking','mic-outline','10 min conversation challenge'],['Grammar','create-outline','Quick grammar practice'],['Vocabulary','book-outline','Learn 10 useful words'],['Pronunciation','volume-high-outline','Sound more natural']];
+export default function ExploreScreen(){return <View style={s.container}><Text style={s.title}>Explore</Text><Text style={s.sub}>Choose a skill and make progress today.</Text><View style={s.grid}>{items.map(([t,icon,d])=><Pressable key={t} style={s.card}><View style={s.icon}><Ionicons name={icon} size={23} color={colors.primary}/></View><Text style={s.ctitle}>{t}</Text><Text style={s.desc}>{d}</Text></Pressable>)}</View></View>}
+const s=StyleSheet.create({container:{flex:1,backgroundColor:colors.background,padding:20},title:{fontSize:30,fontWeight:'900',color:colors.text,marginTop:8},sub:{fontSize:14,color:colors.muted,marginTop:4,marginBottom:22},grid:{flexDirection:'row',flexWrap:'wrap',justifyContent:'space-between'},card:{width:'48%',backgroundColor:'#fff',borderRadius:20,padding:16,marginBottom:12,minHeight:145},icon:{width:44,height:44,borderRadius:14,backgroundColor:'#E7F8FA',alignItems:'center',justifyContent:'center'},ctitle:{fontSize:16,fontWeight:'900',color:colors.text,marginTop:12},desc:{fontSize:12,color:colors.muted,lineHeight:17,marginTop:4}});

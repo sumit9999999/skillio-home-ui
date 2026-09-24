@@ -1,0 +1,23 @@
+{
+  "expo": {
+    "name": "Skillio",
+    "slug": "skillio-home",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#F5FCFD"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.skillio.home"
+    },
+    "android": {
+      "package": "com.skillio.home"
+    }
+  }
+}
